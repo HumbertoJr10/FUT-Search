@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.halloween {
+  background: url("https://futhead.cursecdn.com/static/img/19/cards/large/1_22_0.png");
+  background-size: 330px;
+}
+
+.uefa {
+  background: url('https://futhead.cursecdn.com/static/img/23/cards/large/1_3_3.png');
+  background-size: 400px;
+}
+
+.imgHalloween {
+  border: 4px solid orange;
+  border-radius: 70px;
+}
