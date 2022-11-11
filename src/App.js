@@ -99,12 +99,10 @@ function CambiarFondo() {  // CAMBIAR FONDO DEPENDIENDO DE LA CARTA
 
 function login(userData) {
   if (userData.username==myUsername && userData.password == myPassword) {
-    console.log(access + ' estado')
     setAccess(true)
   } else {
     alert('Los datos son incorrectos')
   }
-
 }
 
 useEffect(()=>{
@@ -113,6 +111,7 @@ useEffect(()=>{
   CambiarFondo()
 },[characters],[access]) 
 
+/*
 useEffect(() => {
   if (!access) {
     navigate('/');
@@ -122,7 +121,7 @@ useEffect(() => {
 }, [access]);
 
 console.log(access)
-
+*/
 
 //-----------------RENDER ----------------------------------
   return (

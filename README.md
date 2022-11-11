@@ -6,7 +6,9 @@ Pero... ¿De que va todo esto? Bien, esta es una Single Page desarrollada con Re
 
 La idea original era consumir la Api gratuita de Rick & Morty (https://rickandmortyapi.com/). Y si bien era una idea emocionante yo quería incluirle mi toque personal con Jugadores de futbol pero sin perder la escencia de consumir la Api de Rick & Morty. (Ya que no contaba con una Api de futbol). Asi que encontre una forma divertida de juntar estos dos mundos, por un lado el universo de Rick & Morty y por otro el universo del fútbol.
 
-
+### npm install
+### npm install styled-component
+### npm install react-router-dom
 ### `npm start`
 
 
