@@ -23,15 +23,34 @@ import { useSelector } from 'react-redux'
 function App () { //------------------- COMPONENTE ----------------------------
 
   //-------------------------------- USE ESTATE y FUNCIONES----------------------------
-  const [characters, setCharacters] = useState([])
+  //const [characters, setCharacters] = useState([])
   const [ access, setAccess] = useState(false)
   let myUsername= 'humberto@gmail.com'
   let myPassword= 'humberto123'
  
+  const character = useSelector( state => state.character)
 
   const navigate = useNavigate();
   const location = useLocation();
 
+  function CambiarFondo() {  // CAMBIAR FONDO DEPENDIENDO DE LA CARTA
+    for (let f=0; f<character.length; f++) {
+      
+      if (isNaN(character[f].gender[0])) {
+        document.body.style.backgroundImage = "url(https://pbs.twimg.com/media/DNeM89PXUAIDMkd.jpg)"
+        return
+      }
+    }
+    document.body.style.backgroundImage = "url(https://images5.alphacoders.com/571/571559.jpg)"
+  }
+  
+  useEffect(()=>{
+
+
+    CambiarFondo()
+  },[character]) 
+
+/*
 function BuscarNombre (nombre) {  // BUSCA Y AGREGA JUGADORES <-------------------------
     let mostrar = [];
    
@@ -87,16 +106,9 @@ console.log('solicitando el id: ' + id)
   })
 }
 
-function CambiarFondo() {  // CAMBIAR FONDO DEPENDIENDO DE LA CARTA
-  for (let f=0; f<characters.length; f++) {
-    
-    if (isNaN(characters[f].gender[0])) {
-      document.body.style.backgroundImage = "url(https://pbs.twimg.com/media/DNeM89PXUAIDMkd.jpg)"
-      return
-    }
-  }
-  document.body.style.backgroundImage = "url(https://images5.alphacoders.com/571/571559.jpg)"
-}
+
+
+
 
 function login(userData) {
   if (userData.username==myUsername && userData.password == myPassword) {
@@ -111,7 +123,7 @@ useEffect(()=>{
 
   CambiarFondo()
 },[characters],[access]) 
-
+*/
 /*
 useEffect(() => {
   if (!access) {
@@ -130,13 +142,13 @@ console.log(access)
     <div className='App' style={{ padding: '25px' }}>
       <GlobalStyle />
       {/*<button onClick={CambiarFondo}>PROBAR</button>*/}
-      {location.pathname!='/'?<Nav BuscarNombre={BuscarNombre} BuscarRickMorty={BuscarRickMorty}/>:null}
+      {location.pathname!='/'?<Nav />:null}
       <div>
         <Routes>
-          <Route path='/' element={<Form login={login}/>}/>
-          <Route path='/home' element={<Cards characters={characters} CerrarCarta={CerrarCarta}/>} />
+          <Route path='/' element={<Form />}/>
+          <Route path='/home' element={<Cards />} />
           <Route path='/about' element={<About />} />
-          <Route path='/detail/:detailId' element={<Detail characters={characters}/>} />
+          <Route path='/detail/:detailId' element={<Detail />} />
         </Routes>
       </div>
     </div> 

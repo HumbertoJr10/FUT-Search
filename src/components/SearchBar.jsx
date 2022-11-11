@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { baseDeDatos } from "../App";
+import baseDeDatos from "../BaseDeDatos";
+import { useDispatch, useSelector } from "react-redux";
+import { addCharacter, addPlayer } from "../redux/action/action";
 
 
 const BarraBusqueda = styled.div`
@@ -40,24 +42,44 @@ margin-left: 10px;
 
 export default function SearchBar({BuscarNombre, BuscarRickMorty}) {
 
+   const character = useSelector(state=>state.character)
+
    const [ texto, setTexto ] = useState('')
+
+   const dispatch = useDispatch()
 
  function estadotexto (e) {
     setTexto(e.target.value)
  }
 
 function buscar() {
+
+   let condicion1 = character.filter(e => e.name.toUpperCase().includes(texto.toUpperCase()))
+   let condicion2 = character.filter(e => e.id == texto)
+
+   if (condicion1.length>0 || condicion2.length>0) {
+      alert('El personaje ya existe')
+      return
+   }
+
    let evaluar = texto*1;
    if (!isNaN(evaluar)) {
 
       if (evaluar<827 && evaluar>0) {
-         BuscarRickMorty(texto)
+         console.log(character)
+         dispatch(addCharacter(texto))
       } else {
          alert('Numero de Personaje no Valido')
       }
       
    } else {
-      BuscarNombre(texto)
+      let busqueda = baseDeDatos.filter(e=> e.name.toUpperCase().includes(texto.toUpperCase()))
+      if (busqueda.length>0) {
+         dispatch(addPlayer(texto))
+      } else {
+         alert('Jugador No encontrado')
+      }
+      
    }
 }
 
@@ -67,6 +89,8 @@ const BuscarNombreEnter = (e) =>{
      e.target.value = ''
    }
   }
+
+  console.log(character)
 
    return (
       <BarraBusqueda>
