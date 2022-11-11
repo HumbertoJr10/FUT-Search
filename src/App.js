@@ -45,71 +45,11 @@ function App () { //------------------- COMPONENTE ----------------------------
   }
   
   useEffect(()=>{
-
-
     CambiarFondo()
   },[character]) 
 
-/*
-function BuscarNombre (nombre) {  // BUSCA Y AGREGA JUGADORES <-------------------------
-    let mostrar = [];
-   
-    baseDeDatos.map((e)=> {
-      if (e.name.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(nombre.toUpperCase())) {
-        mostrar.push(e);
-      }
-    })
-    
-    if (characters.includes(mostrar[0])) {
-      alert(`${mostrar[0].name} Ya ha sido agregado`)
-    } else if (mostrar.length>0) {
-      setCharacters([...characters, mostrar[0]])
-      navigate("/home")
-    }  else {
-      alert('Jugador No encontrado')
-    }
-  }
 
-function CerrarCarta (nombre) {   // SACA LA CARTA DE VISTA 
-    let mostrar=[]
-    for (let f=0; f<characters.length;f++) {
-      if (characters[f].name!=nombre) {
-        mostrar.push(characters[f])
-      }
-    }
-    setCharacters(mostrar)
- }
-
-function BuscarRickMorty(id) {    // BUSCAR RICK Y MORTY
-
-console.log('solicitando el id: ' + id)
-  
-  fetch(`https://rickandmortyapi.com/api/character/${id}`)
-  .then( (response) => response.json())
-  .then( (data) => {
-    let nuevo = {
-      name: data.name,
-      species: data.species,
-      gender: data.gender,
-      image: data.image,
-      id: data.id
-    }
-      for (let f=0; f<characters.length; f++) {
-        if (characters[f].name===nuevo.name) {
-          alert(`${nuevo.name} ya ha sido agregado`)
-          return
-        }
-      }
-
-      setCharacters([...characters, nuevo])
-      navigate("/home")
-  })
-}
-
-
-
-
-
+  /*
 function login(userData) {
   if (userData.username==myUsername && userData.password == myPassword) {
     setAccess(true)
@@ -117,14 +57,6 @@ function login(userData) {
     alert('Los datos son incorrectos')
   }
 }
-
-useEffect(()=>{
-
-
-  CambiarFondo()
-},[characters],[access]) 
-*/
-/*
 useEffect(() => {
   if (!access) {
     navigate('/');

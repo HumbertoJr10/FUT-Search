@@ -15,6 +15,7 @@ const BtnStyle = styled.button`
    cursor: pointer;
    margin: 10px;
    margin-left: 0;
+   font-size: 18px;
    &:hover {
       background-color: gold;
       color: #252422;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 // halloween: 'https://futhead.cursecdn.com/static/img/19/cards/large/1_22_0.png'
 // black: 'https://futhead.cursecdn.com/static/img/23/cards/large/1_3_3.png'
@@ -16,6 +17,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+transition: filter 0.3s linear;
 
 &:hover {
    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.7));
@@ -52,6 +54,7 @@ const LetrasCarta = styled.h1`
    //-webkit-text-stroke: black 2px;
    margin: 0;
    font-size: 28px;
+   font-family: 'Indie Flower', cursive;
 `
 
 
@@ -67,9 +70,9 @@ export default function Card({name, species, gender, image, CerrarCarta, detailI
          <ImagenesCarta className={isNaN(detailId)?'null':'imgHalloween'} src={image} alt="imagen" />
          <BotonCerrar onClick={cerrarFinal}> Cerrar </BotonCerrar>
          
-         <Link to={`/detail/${detailId}`}>
+         <NavLink className="CardName" to={`/detail/${detailId}`}>
             <LetrasCarta>{name}</LetrasCarta>
-         </Link>  
+         </NavLink>  
          <LetrasCarta>{species}</LetrasCarta>
          <LetrasCarta>{gender}</LetrasCarta>
       </Cartita>

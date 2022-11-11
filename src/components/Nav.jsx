@@ -30,7 +30,6 @@ margin-left: 20px;
 `
 
 const BotonesNav = styled.span`
-    color: orange;
     text-decoration: none;
     text-align: center;
     border: 1px solid white;
@@ -39,29 +38,31 @@ const DivBarraBotones = styled.div`
 display: flex;
 `
 
+const DivBarraBotonesMenu = styled.div`
+display: flex;
+`
+
+
+
 export default function Nav ({BuscarNombre, BuscarRickMorty}) {
     return (
         <StylesNav>
-          <div>
-                <NavLink to="/home">
+          <DivBarraBotonesMenu>
+                <NavLink to="/home" className="LOGO">
                     <LogoIMG src={LOGO}/>
                 </NavLink>
 
-
-                <Link to="/home">
-                    <BotonesNav>Home</BotonesNav>
-                </Link>
-
-                <Link to="/about">
-                    <BotonesNav>About</BotonesNav>
-                </Link>
-
-            </div>
+                <NavLink className="MenuButton" to="/home">
+                    <p>Home</p>
+                </NavLink>
+                <NavLink className="MenuButton" to="/about">
+                    <p>About</p>
+                </NavLink>
+            </DivBarraBotonesMenu>
             <DivBarraBotones>
                 <SearchBar BuscarNombre={BuscarNombre} BuscarRickMorty={BuscarRickMorty}/>
                 <BotonRandom BuscarRickMorty={BuscarRickMorty}/>
             </DivBarraBotones>
-            
         </StylesNav>
     ) 
 }

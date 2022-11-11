@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import baseDeDatos from "../BaseDeDatos";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,6 +19,7 @@ const BotonBarra = styled.button`
    border: 1px solid gold;
    cursor: pointer;
    margin: 10px;
+   font-size: 18px;
    &:hover {
       background-color: gold;
       color: #252422;
@@ -43,9 +44,7 @@ margin-left: 10px;
 export default function SearchBar({BuscarNombre, BuscarRickMorty}) {
 
    const character = useSelector(state=>state.character)
-
    const [ texto, setTexto ] = useState('')
-
    const dispatch = useDispatch()
 
  function estadotexto (e) {
@@ -90,14 +89,18 @@ const BuscarNombreEnter = (e) =>{
    }
   }
 
+  useEffect(()=>{
+   setTexto('')
+  },[character])
+
   console.log(character)
 
    return (
       <BarraBusqueda>
          <CampoInput id='TextpBusqueda' type='search' onKeyPress={BuscarNombreEnter} onChange={estadotexto}/>
-         <BotonBarra onClick={buscar}>
-            Buscar
-         </BotonBarra>
+            <BotonBarra onClick={buscar}>
+               Buscar
+            </BotonBarra>
          </BarraBusqueda>
    );
 }
