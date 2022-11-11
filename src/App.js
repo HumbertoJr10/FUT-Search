@@ -12,6 +12,7 @@ import About from './components/About'
 import Detail from './components/Detail'
 import { useNavigate } from "react-router-dom";
 import Form from './components/Form'
+import { useSelector } from 'react-redux'
 
 
 
@@ -31,7 +32,7 @@ function App () { //------------------- COMPONENTE ----------------------------
   const navigate = useNavigate();
   const location = useLocation();
 
-  function BuscarNombre (nombre) {  // BUSCA Y AGREGA JUGADORES <-------------------------
+function BuscarNombre (nombre) {  // BUSCA Y AGREGA JUGADORES <-------------------------
     let mostrar = [];
    
     baseDeDatos.map((e)=> {
@@ -50,7 +51,7 @@ function App () { //------------------- COMPONENTE ----------------------------
     }
   }
 
- function CerrarCarta (nombre) {   // SACA LA CARTA DE VISTA 
+function CerrarCarta (nombre) {   // SACA LA CARTA DE VISTA 
     let mostrar=[]
     for (let f=0; f<characters.length;f++) {
       if (characters[f].name!=nombre) {
@@ -122,6 +123,7 @@ useEffect(() => {
 
 console.log(access)
 */
+
 
 //-----------------RENDER ----------------------------------
   return (
