@@ -22,8 +22,6 @@ import { useSelector } from 'react-redux'
 
 function App () { //------------------- COMPONENTE ----------------------------
 
-  //-------------------------------- USE ESTATE y FUNCIONES----------------------------
-  //const [characters, setCharacters] = useState([])
   const [ access, setAccess] = useState(false)
   let myUsername= 'humberto@gmail.com'
   let myPassword= 'humberto123'

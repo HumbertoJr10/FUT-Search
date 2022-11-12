@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { deleteCard } from '../redux/action/action';
+import { addFavorite, deleteFavorite } from '../redux/action/action';
 
 
 const ContenedorCartas = styled.div`
@@ -13,7 +14,9 @@ flex-wrap: wrap;
 
 export default function Cards(props) {
    const character = useSelector( state => state.character) 
+   const favorites = useSelector( state => state.favorites)
    const dispatch = useDispatch()
+
    
    return (
       <ContenedorCartas>

@@ -8,7 +8,7 @@ body {
     background: url("https://images5.alphacoders.com/571/571559.jpg"); // IMAGEN CAMPO
     background-size: 100%;
     background-attachment: fixed;
-    transition: background 1s linear;
+    transition: background .1s linear;
 }
 `
 
