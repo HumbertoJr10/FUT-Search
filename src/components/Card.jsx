@@ -70,7 +70,7 @@ width: 50px;
 position: absolute;
 top: 407px;
 left: 274px;
-transform: translateY(250%);
+transform: translateY(300%);
 transition: transform .5s linear;
 &:hover {
    src: url("https://cdn.pixabay.com/photo/2020/06/20/08/01/instagram-5320013_960_720.png");

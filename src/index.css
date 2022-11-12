@@ -37,9 +37,24 @@ code {
   font-size: 20px;
 }
 
+.MenuButtonFav{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: first baseline;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
+  width: 100px;
+}
+
+.MenuButtonFav:hover {
+  background-color: #1f1d1b;
+}
+
 .MenuButton:hover {
   background-color: #1f1d1b;
-  border-bottom: yellow;
 }
 
 .LOGO {
@@ -66,3 +81,9 @@ code {
   filter: drop-shadow(2px 2px 2px gold);
 }
 
+.mix {
+  padding-left: 12px;
+}
+.grand {
+  padding-left: 6px;
+}

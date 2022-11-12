@@ -5,6 +5,7 @@ import LOGO from "../img/LOGOIMG.png"
 import App from "../App";
 import { NavLink, Link } from "react-router-dom";
 import BotonRandom from "./BotonRandom";
+import { useSelector } from "react-redux";
 
 
 
@@ -42,9 +43,22 @@ const DivBarraBotonesMenu = styled.div`
 display: flex;
 `
 
-
+const NumFav = styled.span`
+    background: url('https://pngimg.com/uploads/love/love_PNG85.png');
+    background-size: 32px;
+    
+    font-size: 17px;
+    
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+`
 
 export default function Nav ({BuscarNombre, BuscarRickMorty}) {
+
+    const favorites = useSelector(state=> state.favorites)
+
     return (
         <StylesNav>
           <DivBarraBotonesMenu>
@@ -54,6 +68,10 @@ export default function Nav ({BuscarNombre, BuscarRickMorty}) {
 
                 <NavLink className="MenuButton" to="/home">
                     <p>Home</p>
+                </NavLink>
+                <NavLink className="MenuButtonFav" to="/home">
+                    <p>Favorites</p>
+                    {favorites.length>0?<NumFav className={favorites.length>9?'grand':'mix'}>{favorites.length}</NumFav>:null}
                 </NavLink>
                 <NavLink className="MenuButton" to="/about">
                     <p>About</p>
