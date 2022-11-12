@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux"
 import styled from "styled-components"
 import Card from "./Card"
+import { useDispatch } from "react-redux"
+import { deleteCard } from "../redux/action/action"
 
 const ContenedorCartas = styled.div`
 display: flex;
@@ -9,8 +11,9 @@ flex-wrap: wrap;
 `
 
 
-export default function FavoriteCard () {
+export default function FavoriteContainer () {
 
+    const dispatch = useDispatch()
     const favorites = useSelector(state => state.favorites)
 
     return (

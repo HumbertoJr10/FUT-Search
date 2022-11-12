@@ -13,6 +13,7 @@ import Detail from './components/Detail'
 import { useNavigate } from "react-router-dom";
 import Form from './components/Form'
 import { useSelector } from 'react-redux'
+import FavoriteContainer from './components/FavoriteContainer'
 
 
 
@@ -79,6 +80,7 @@ console.log(access)
           <Route path='/home' element={<Cards />} />
           <Route path='/about' element={<About />} />
           <Route path='/detail/:detailId' element={<Detail />} />
+          <Route path='/favorites' element={<FavoriteContainer />} />
         </Routes>
       </div>
     </div> 

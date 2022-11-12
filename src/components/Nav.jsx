@@ -69,7 +69,7 @@ export default function Nav ({BuscarNombre, BuscarRickMorty}) {
                 <NavLink className="MenuButton" to="/home">
                     <p>Home</p>
                 </NavLink>
-                <NavLink className="MenuButtonFav" to="/home">
+                <NavLink className="MenuButtonFav" to="/favorites">
                     <p>Favorites</p>
                     {favorites.length>0?<NumFav className={favorites.length>9?'grand':'mix'}>{favorites.length}</NumFav>:null}
                 </NavLink>
