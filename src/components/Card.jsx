@@ -26,6 +26,7 @@ justify-content: center;
 align-items: center;
 transition: filter 0.3s linear;
 overflow: hidden;
+margin-bottom: 30px;
 
 &:hover {
    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.7));

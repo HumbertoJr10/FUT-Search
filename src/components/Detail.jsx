@@ -25,6 +25,13 @@ background-color: white;
 display: flex;
 border-left: 1px solid white;
 border-right: 1px solid white;
+
+@media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 `
 
 const DivTextoDetail = styled.div`
@@ -37,6 +44,8 @@ const DivTextoDetail = styled.div`
 const TituloDetail = styled.h1`
     margin: 0;
     color: gold;
+    font-family: 'Indie Flower', cursive;
+    font-size: 42px;
 `
 
 const ImagenDetail = styled.img`

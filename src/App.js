@@ -17,8 +17,6 @@ import FavoriteContainer from './components/FavoriteContainer'
 
 
 
-
-
 //------------------------------------------------------------------------
 
 function App () { //------------------- COMPONENTE ----------------------------

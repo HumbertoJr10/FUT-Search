@@ -87,3 +87,31 @@ code {
 .grand {
   padding-left: 6px;
 }
+
+.divResponsive {
+  background: gold;
+  height: 2px;
+  width: 100%;
+  border-radius: 10px;
+  transition: all .5s;
+  transform-origin: left;
+}
+
+
+  @media (max-width: 1000px) {
+    .menuResponsiveON {
+    display: none
+  }
+
+  .menuResponsiveOFF {
+    display: flex
+  }
+
+  .MenuButton {
+    width: 100%;
+  }
+  .MenuButtonFav {
+    width: 100%;
+    justify-content: center;
+  }
+}
