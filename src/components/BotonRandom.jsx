@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { addCharacter } from "../redux/action/action";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -25,10 +26,12 @@ const BtnStyle = styled.button`
 export default function BotonRandom({BuscarRickMorty}) {
 
     const dispatch = useDispatch()
+    const navigate= useNavigate()
 
     function buscador() {
         let randomId= Math.floor(Math.random() * 825)+1;
         dispatch(addCharacter(randomId))
+        navigate("/home")
     }
 
     return (

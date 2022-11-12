@@ -3,6 +3,7 @@ import styled from "styled-components";
 import baseDeDatos from "../BaseDeDatos";
 import { useDispatch, useSelector } from "react-redux";
 import { addCharacter, addPlayer } from "../redux/action/action";
+import { useNavigate } from "react-router-dom";
 
 
 const BarraBusqueda = styled.div`
@@ -44,6 +45,7 @@ margin-left: 10px;
 export default function SearchBar({BuscarNombre, BuscarRickMorty}) {
 
    const character = useSelector(state=>state.character)
+   const navigate = useNavigate()
    const [ texto, setTexto ] = useState('')
    const dispatch = useDispatch()
 
@@ -60,12 +62,13 @@ function buscar() {
       alert('El personaje ya existe')
       return
    }
+   navigate("/home")
 
    let evaluar = texto*1;
    if (!isNaN(evaluar)) {
 
       if (evaluar<827 && evaluar>0) {
-         console.log(character)
+         
          dispatch(addCharacter(texto))
       } else {
          alert('Numero de Personaje no Valido')
@@ -92,8 +95,6 @@ const BuscarNombreEnter = (e) =>{
   useEffect(()=>{
    setTexto('')
   },[character])
-
-  console.log(character)
 
    return (
       <BarraBusqueda>
