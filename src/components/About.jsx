@@ -44,6 +44,9 @@ const ImagenAbout = styled.img`
 
 const ImagenLogo = styled.img`
 width: 600px;
+@media (max-width: 800px) {
+    width: 400px;
+}
 `
 
 const TextoAbout = styled.h2`
@@ -106,16 +109,16 @@ export default function About () {
                                 Espero no haberte aburrido con mi discurso... ¿No? Bueno, finalmente muchas gracias por tomarte el tiempo de visitar mi proyecto, puedes seguirme en mis redes sociales 😁
                             </TextoAbout>
                             <SocialContainer>
-                                <a href="https://www.linkedin.com/in/humbertojrguerra/">
+                                <a href="https://www.linkedin.com/in/humbertojrguerra/" target="_blank">
                                     <IconSocial src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="Linkedin"/>
                                 </a>
-                                <a href="https://github.com/HumbertoJr10">
+                                <a href="https://github.com/HumbertoJr10" target="_blank">
                                     <IconSocial src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"/>
                                 </a>
-                                <a href="https://www.instagram.com/humberto_jr10/">
+                                <a href="https://www.instagram.com/humberto_jr10/" target="_blank">
                                     <IconSocial src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram"/>
                                 </a>
-                                <a href="https://www.facebook.com/humberto.junior.733/">
+                                <a href="https://www.facebook.com/humberto.junior.733/" target="_blank">
                                     <IconSocial src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" />
                                 </a>
                             </SocialContainer>

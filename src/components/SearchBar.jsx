@@ -100,7 +100,7 @@ const BuscarNombreEnter = (e) =>{
       <BarraBusqueda>
          <CampoInput id='TextpBusqueda' type='search' onKeyPress={BuscarNombreEnter} onChange={estadotexto}/>
             <BotonBarra onClick={buscar}>
-               Buscar
+               Add Card
             </BotonBarra>
          </BarraBusqueda>
    );

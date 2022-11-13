@@ -49,6 +49,7 @@ const ButtonLogin = styled.button`
     color: gold;
     border: 1px solid gold;
     cursor: pointer;
+    margin-bottom: 10px;
  
     &:hover {
       background-color: gold;
@@ -149,11 +150,7 @@ export default function Form({login}) {  // ----------Componente ---------
         
         <ImagenLogo src={logo} alt="logoFifaMorty"/>
 
-        <div>
-            {errors.userErrros?<ErrorLoginP>❌  {errors.userErrros}</ErrorLoginP>:null}
-            {errors.passErrors?<ErrorLoginP>❌  {errors.passErrors}</ErrorLoginP>:null}
-            {errorLogin?<ErrorLoginP>❌  Los datos ingresados son incorrectos</ErrorLoginP>:null}
-        </div>
+      
     
     <DivLogin>
         <TextoLogin>Welcome</TextoLogin>
@@ -162,6 +159,11 @@ export default function Form({login}) {  // ----------Componente ---------
             <InputLogin onChange={passwordHandler} type="password" placeholder="Password" />
         </DivInputLogin>
         <ButtonLogin disabled={errors.passErrors?true:false} onClick={login}>Login</ButtonLogin>
+        <div>
+            {errors.userErrros?<ErrorLoginP>❌  {errors.userErrros}</ErrorLoginP>:null}
+            {errors.passErrors?<ErrorLoginP>❌  {errors.passErrors}</ErrorLoginP>:null}
+            {errorLogin?<ErrorLoginP>❌  Los datos ingresados son incorrectos</ErrorLoginP>:null}
+        </div>
     </DivLogin>
     </Todo>)
 }
