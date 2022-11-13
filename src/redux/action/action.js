@@ -7,6 +7,7 @@ export const ADD_FAVORITE = 'ADD_FAVORITE'
 export const DELETE_CARD = 'DELETE_CARD'
 export const DELETE_FAVORITE = 'DELETE_FAVORITE'
 export const ADD_FAVORITE_PLAYER = 'ADD_FAVORITE_PLAYER'
+export const ACCESS_LOGIN = 'ACCESS_LOGIN'
 
 //---------------------------------------
 
@@ -73,4 +74,9 @@ export function deleteFavorite (name) {
     }
 }
 
-
+export function accessLogin () {
+    return {
+        type: ACCESS_LOGIN,
+        payload: true
+    }
+}

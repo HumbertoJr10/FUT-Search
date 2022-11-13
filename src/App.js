@@ -18,18 +18,16 @@ import fondoLogin from './img/fondoLogin.png'
 
 
 
+
 //------------------------------------------------------------------------
 
 function App () { //------------------- COMPONENTE ----------------------------
 
-  const [ access, setAccess] = useState(false)
-  let myUsername= 'humberto@gmail.com'
-  let myPassword= 'humberto123'
- 
-  const character = useSelector( state => state.character)
 
+  const character = useSelector( state => state.character)
   const navigate = useNavigate();
   const location = useLocation();
+  const access = useSelector(state => state.access)
 
   function CambiarFondo() {  // CAMBIAR FONDO DEPENDIENDO DE LA CARTA
     for (let f=0; f<character.length; f++) {
@@ -47,31 +45,10 @@ function App () { //------------------- COMPONENTE ----------------------------
   },[character]) 
 
   useEffect(()=>{
-    console.log('cambiando fondo')
-    if (location.pathname==='/') {
-      document.body.style.backgroundImage= fondoLogin
+    if (!access) {
+      navigate('/')
     }
   },[])
-
-console.log(location)
-  /*
-function login(userData) {
-  if (userData.username==myUsername && userData.password == myPassword) {
-    setAccess(true)
-  } else {
-    alert('Los datos son incorrectos')
-  }
-}
-useEffect(() => {
-  if (!access) {
-    navigate('/');
-  } else {
-    navigate('/home')
-  }
-}, [access]);
-
-console.log(access)
-*/
 
 
 //-----------------RENDER ----------------------------------

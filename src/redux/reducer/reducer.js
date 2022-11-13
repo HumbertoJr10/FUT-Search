@@ -1,9 +1,10 @@
-import { ADD_PLAYER, ADD_CHARACTER, ADD_FAVORITE, DELETE_CARD, DELETE_FAVORITE, ADD_FAVORITE_PLAYER } from "../action/action";
+import { ADD_PLAYER, ADD_CHARACTER, ADD_FAVORITE, DELETE_CARD, DELETE_FAVORITE, ADD_FAVORITE_PLAYER, ACCESS_LOGIN } from "../action/action";
 
 
 const initialState = {
     character: [],
-    favorites: []
+    favorites: [],
+    access: false
 }
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -43,6 +44,12 @@ const reducer = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 favorites: state.favorites.filter ( e => e.name != payload)
+            }
+
+        case ACCESS_LOGIN:
+            return {
+                ...state,
+                access: true
             }
 
         default:

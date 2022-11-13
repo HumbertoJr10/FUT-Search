@@ -3,6 +3,10 @@ import { useState } from "react";
 import styled from "styled-components";
 import validation from "./validation";
 import logo from "../img/logoFifaMorty.png"
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { accessLogin } from "../redux/action/action";
 
 //--------------- ESTILOS -------------------------
 const DivLogin = styled.div`
@@ -28,14 +32,14 @@ position: relative;
 
 `
 const InputLogin = styled.input`
-    background-color: #252422;
-    width: 200px;
-    height: 40px;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    position: relative;
-    top: -10px
+background-color: #252422;
+width: 200px;
+height: 40px;
+color: white;
+border-radius: 10px;
+margin-bottom: 10px;
+position: relative;
+top: -10px;
 `
 const ButtonLogin = styled.button`
     background-color: #252422;
@@ -83,7 +87,6 @@ align-items: center;
 const TextoLogin = styled.h1`
     font-family: 'Indie Flower', cursive;
 `
-
 const ImagenLogo = styled.img`
     width: 450px;
     filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 1));
@@ -95,10 +98,6 @@ const ImagenLogo = styled.img`
 `
 
 //--------------------------------------------------
-//-----------------FUNCIONES --------------------------
-
- 
-
 
 
 export default function Form({login}) {  // ----------Componente ---------
@@ -106,6 +105,13 @@ export default function Form({login}) {  // ----------Componente ---------
     const [userData, setUserData] = useState({
         username: '', password: ''
     })
+
+    const [errorLogin, setErrorLogin] = useState(false)
+    const cuenta = {
+        username: 'humberto@gmail.com',
+        password: 'humberto123'
+    }
+
     
     const [errors, setErrors] = useState({
         userErrros: '',
@@ -120,7 +126,23 @@ export default function Form({login}) {  // ----------Componente ---------
         setErrors(validation(userData))
     }
       
+    const access = useSelector(state => state.access)
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
 
+    useEffect(()=>{
+        if (access) {
+            navigate('/home')
+        }
+    }, [access])
+
+    function login () {
+        if (userData.username===cuenta.username && userData.password===cuenta.password) {
+            dispatch(accessLogin())
+        } else {
+            setErrorLogin(true)
+        }
+    }
 
     return (
         <Todo>
@@ -130,6 +152,7 @@ export default function Form({login}) {  // ----------Componente ---------
         <div>
             {errors.userErrros?<ErrorLoginP>❌  {errors.userErrros}</ErrorLoginP>:null}
             {errors.passErrors?<ErrorLoginP>❌  {errors.passErrors}</ErrorLoginP>:null}
+            {errorLogin?<ErrorLoginP>❌  Los datos ingresados son incorrectos</ErrorLoginP>:null}
         </div>
     
     <DivLogin>
@@ -138,7 +161,7 @@ export default function Form({login}) {  // ----------Componente ---------
             <InputLogin onChange={usernameHandler} type="text" placeholder="Username"/>
             <InputLogin onChange={passwordHandler} type="password" placeholder="Password" />
         </DivInputLogin>
-        <ButtonLogin disabled={errors.passErrors?true:false} onClick={()=> login(userData)}>Login</ButtonLogin>
+        <ButtonLogin disabled={errors.passErrors?true:false} onClick={login}>Login</ButtonLogin>
     </DivLogin>
     </Todo>)
 }
