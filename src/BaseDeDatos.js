@@ -1,135 +1,172 @@
 const baseDeDatos = [
     {
       name: 'Karim Benzema',
-      species: 'Delantero',
-      gender: '34 años',
-      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p67274017.png'
+      species: 'Forward',
+      gender: '34 years',
+      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p67274017.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Toni Kroos',
-      species: 'Centrocampista',
-      gender: '32 años',
-      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p67291385.png'
+      species: 'Midfielder',
+      gender: '32 years',
+      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p67291385.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Luka Modrić',
-      species: 'Centrocampista',
-      gender: '37 años',
-      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p67285867.png'
+      species: 'Midfielder',
+      gender: '37 years',
+      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p67285867.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Vinicius Jr.',
-      species: 'Extremo Derecho',
-      gender: '22 años',
-      image: 'https://futhead.cursecdn.com/static/img/22/players_alt/p117679306.png'
+      species: 'Left Midfielder',
+      gender: '22 years',
+      image: 'https://futhead.cursecdn.com/static/img/22/players_alt/p117679306.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Rafael Leão',
-      species: 'Extremo',
-      gender: '23 años',
-      image: 'https://www.fifplay.com/img/fifa/22/players/p117682233.png'
+      species: 'Left Midfielder',
+      gender: '23 years',
+      image: 'https://www.fifplay.com/img/fifa/22/players/p117682233.png',
+      team: 'AC Milan',
     },
     {
       name: 'Sandro Tonali',
-      species: 'Mediocampista',
-      gender: '22 años',
-      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p117681608.png'
+      species: 'Midfielder',
+      gender: '22 years',
+      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p117681608.png',
+      team: 'AC Milan',
     },
     {
       name: 'Theo Hernández',
-      species: 'Lateral Izquierdo',
-      gender: '25 años',
-      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p184782032.png'
+      species: 'Left Defense',
+      gender: '25 years',
+      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p184782032.png',
+      team: 'AC Milan',
+      
     },
     {
       name: 'Thibaut Courtois',
-      species: 'Portero',
-      gender: '30 años',
-      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p100855415.png'
+      species: 'Goalkeeper',
+      gender: '30 years',
+      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p100855415.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Andriy Lunin',
-      species: 'Portero',
-      gender: '23 años',
-      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p67352816.png'
+      species: 'Goalkeeper',
+      gender: '23 years',
+      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p67352816.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Éder Militão',
-      species: 'Defensa',
-      gender: '24 años',
-      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p67348994.png'
+      species: 'Center Defense',
+      gender: '24 years',
+      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p67348994.png',
+      team: 'Real Madrid',
     },
     {
       name: 'David Alaba',
-      species: 'Defensa',
-      gender: '30 años',
-      image: 'https://www.futwiz.com/assets/img/fifa22/faces/100860741.png'
+      species: 'Center Defense',
+      gender: '30 years',
+      image: 'https://www.futwiz.com/assets/img/fifa22/faces/100860741.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Antonio Rüdiger',
-      species: 'Defensa',
-      gender: '29 años',
-      image: 'https://www.futwiz.com/assets/img/fifa23/faces/50537100.png'
+      species: 'Center Defense',
+      gender: '29 years',
+      image: 'https://www.futwiz.com/assets/img/fifa23/faces/50537100.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Nacho Fernández',
-      species: 'Defensa',
-      gender: '32 años',
-      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p67309588.png'
+      species: 'Center Defense',
+      gender: '32 years',
+      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p67309588.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Ferland Mendy',
-      species: 'Defensa',
-      gender: '27 años',
-      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p117669130.png'
+      species: 'Left Defense',
+      gender: '27 years',
+      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p117669130.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Daniel Carvajal',
-      species: 'Defensa',
-      gender: '30 años',
-      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p151199907.png'
+      species: 'Right Defense',
+      gender: '30 years',
+      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p151199907.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Aurélien Tchouameni',
-      species: 'Mediocampista',
-      gender: '22 años',
-      image: 'https://cdn.futbin.com/content/fifa23/img/players/p50573285.png'
+      species: 'Midfielder',
+      gender: '22 years',
+      image: 'https://cdn.futbin.com/content/fifa23/img/players/p50573285.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Federico Valverde',
-      species: 'Mediocampista',
-      gender: '24 años',
-      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p100902349.png'
+      species: 'Midfielder',
+      gender: '24 years',
+      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p100902349.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Eduardo Camavinga',
-      species: 'Mediocampista',
-      gender: '19 años',
-      image: 'https://cdn.futbin.com/content/fifa22/img/players/p84134323.png'
+      species: 'Midfielder',
+      gender: '19 years',
+      image: 'https://cdn.futbin.com/content/fifa22/img/players/p84134323.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Eden Hazard',
-      species: 'Extremo',
-      gender: '31 años',
-      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p151178221.png'
+      species: 'Left Midfielder',
+      gender: '31 years',
+      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p151178221.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Rodrygo',
-      species: 'Extremo',
-      gender: '21 años',
-      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p84129892.png'
+      species: 'Right Midfielder',
+      gender: '21 years',
+      image: 'https://futhead.cursecdn.com/static/img/20/players_alt/p84129892.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Marco Asensio',
-      species: 'Extremo',
-      gender: '26 años',
-      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p84106914.png'
+      species: 'Right Midfielder',
+      gender: '26 years',
+      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p84106914.png',
+      team: 'Real Madrid',
     },
     {
       name: 'Mariano Díaz',
-      species: 'Delantero',
-      gender: '29 años',
-      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p67330503.png'
+      species: 'Forward',
+      gender: '29 years',
+      image: 'https://futhead.cursecdn.com/static/img/21/players_alt/p67330503.png',
+      team: 'Real Madrid',
+    },
+    {
+      name: 'Lionel Messi',
+      species: 'Midfielder',
+      gender: '35 years',
+      image: 'https://www.futwiz.com/assets/img/fifa22/faces/100821319.png',
+      team: 'PSG',
+    },
+    {
+      name: 'Cristiano Ronaldo',
+      species: 'Forward',
+      gender: '37 years',
+      image: 'https://futhead.cursecdn.com/static/img/22/players_alt/p218124609.png',
+      team: 'Manchester United',
     },
   ]
 

@@ -1,12 +1,10 @@
 import './App.css'
 import Cards from './components/Cards.jsx'
-//import characters, { Rick } from './data.js'
 import styled from 'styled-components'
 import GlobalStyle from './globalStyles'
 import Nav from './components/Nav'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import baseDeDatos from './BaseDeDatos'
 import { Routes, Route, useLocation} from 'react-router-dom'
 import About from './components/About'
 import Detail from './components/Detail'
@@ -14,7 +12,6 @@ import { useNavigate } from "react-router-dom";
 import Form from './components/Form'
 import { useSelector } from 'react-redux'
 import FavoriteContainer from './components/FavoriteContainer'
-import fondoLogin from './img/fondoLogin.png'
 
 
 
@@ -55,7 +52,6 @@ function App () { //------------------- COMPONENTE ----------------------------
   return (
     <div className='App' style={{ padding: '25px' }}>
       <GlobalStyle />
-      {/*<button onClick={CambiarFondo}>PROBAR</button>*/}
       {location.pathname!='/'?<Nav />:null}
       <div>
         <Routes>
