@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import Form from './components/Form'
 import { useSelector } from 'react-redux'
 import FavoriteContainer from './components/FavoriteContainer'
+import fondoLogin from './img/fondoLogin.png'
 
 
 
@@ -45,7 +46,14 @@ function App () { //------------------- COMPONENTE ----------------------------
     CambiarFondo()
   },[character]) 
 
+  useEffect(()=>{
+    console.log('cambiando fondo')
+    if (location.pathname==='/') {
+      document.body.style.backgroundImage= fondoLogin
+    }
+  },[])
 
+console.log(location)
   /*
 function login(userData) {
   if (userData.username==myUsername && userData.password == myPassword) {

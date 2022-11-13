@@ -16,20 +16,17 @@ const defaultOption = {
   }
 }
 
-
 const ContenedorCartas = styled.div`
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
 `
-
 const DivIngreso = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
 
 `
-
 const TextoIngreso = styled.h1`
    color: white;
    font-family: 'Indie Flower', cursive;

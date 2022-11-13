@@ -19,7 +19,7 @@ width: 280px;
 position: relative;
 background-repeat: no-repeat;
 margin: 0;
-padding: 50px;
+padding: 55px;
 display: flex;
 flex-direction: column;
 justify-content: center;
