@@ -49,7 +49,7 @@ const ImagenPlayer = styled.img`
     position: relative;
     @media (max-width: 500px) {
         width: 80%;
-        font-size: 15px;
+
     }
     
 `
@@ -60,6 +60,10 @@ const ImagenCharacter = styled.img`
     width: 500px;
     border-radius: 30px;
     margin-bottom: 25px;
+    @media (max-width: 500px) {
+        width: 80%;
+        height: auto;
+    }
 `
 
 const PlayerDetail = styled.h3`
