@@ -43,7 +43,7 @@ const TextoIngreso = styled.h1`
    padding: 15px;
    @media (max-width: 500px) {
         width: 80%;
-        font-size: 12px;
+        font-size: 15px;
     }
 `
 

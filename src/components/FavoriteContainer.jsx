@@ -15,6 +15,7 @@ const DivIngreso = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
+   align-items: center;
 `
 const TextoIngreso = styled.h1`
    color: white;
@@ -26,6 +27,10 @@ const TextoIngreso = styled.h1`
    backdrop-filter: blur(10px);
    opacity: 75%;
    padding: 15px;
+   @media (max-width: 500px) {
+        width: 80%;
+        font-size: 15px;
+    }
 `
 
 
