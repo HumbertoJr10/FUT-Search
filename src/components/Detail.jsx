@@ -47,6 +47,10 @@ border-right: 1px solid white;
 
 const ImagenPlayer = styled.img`
     position: relative;
+    @media (max-width: 500px) {
+        width: 80%;
+        font-size: 15px;
+    }
     
 `
 
