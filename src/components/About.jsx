@@ -17,12 +17,16 @@ const Header = styled.div`
     border-right: gold 1px solid;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+ 
 `
 const TituloAbout = styled.h1`
     margin: 0;
     color: gold;
     font-family: 'Indie Flower', cursive;
     font-size: 42px;
+    @media (max-width:500px) {
+        font-size: 30px;
+    }
 `
 const Contenido = styled.div`
     margin-left: 5%;
