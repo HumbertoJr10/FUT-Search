@@ -40,6 +40,9 @@ const ImagenAbout = styled.img`
     width: 450px;
     margin-bottom: 5px;
     margin-top: 15px;
+    @media (max-width:500px) {
+        width: 200px;
+    }
 `
 
 const ImagenLogo = styled.img`

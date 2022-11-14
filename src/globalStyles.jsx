@@ -9,6 +9,10 @@ body {
     background-size: 100%;
     background-attachment: fixed;
     transition: background .1s linear;
+    @media (max-width: 700px) {
+        background-size: auto;
+        background-position: 50%;
+    }
 }
 `
 

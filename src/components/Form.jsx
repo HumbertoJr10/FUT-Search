@@ -23,12 +23,15 @@ const DivLogin = styled.div`
     background: #0f0f0f78;
     color: gold;
 
-   
+    @media (max-width: 500px) {
+        width: 90%;
+    }
 `
 const DivInputLogin = styled.div`
 display: flex;
 flex-direction: column;
 position: relative;
+
 
 `
 const InputLogin = styled.input`
@@ -69,6 +72,7 @@ const ButtonLogin = styled.button`
 const ImgLogin = styled.img`
     border-radius: 20px;
     margin-top: 15px;
+    
 `
 const ErrorLoginP= styled.p`
     color: white;
@@ -95,6 +99,9 @@ const ImagenLogo = styled.img`
     &:hover {
         cursor: pointer;
         filter: drop-shadow(0 2px 10px gold);
+    }
+    @media (max-width: 500px) {
+        width: 300px;
     }
 `
 
