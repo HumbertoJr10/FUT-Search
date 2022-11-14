@@ -1,5 +1,7 @@
 # BIENVENIDO!
 
+#### LINK: https://fifamorty.vercel.app/home
+
 Mi nombre es Humberto Jr, soy un apasionado de los video Juegos, los deportes y la Programación, he participado y ganado varios campeonatos de videojuegos a nivel estadal, ahora me encuentro desarrollando mis habilidades para alcanzar una meta que siempre he tenido pero que por diferentes motivos no habia podido comenzar: La meta de convertirme en Programador Full Stack. Este es mi primer proyecto pequeño, el cual he desarrollado durante mi proceso de aprendizaje en el BootCamp de #SoyHenry, así que decidí unir mis tres grandes pasiones en este mini proyecto.
 
 Pero... ¿De que va todo esto? Bien, esta es una Single Page desarrollada con React y Redux para buscar y mostrar Cartas de jugadores de futbol. Originalmente la idea era otra, pero mis pasiones me llevaron a modificar un poco la tematica.
