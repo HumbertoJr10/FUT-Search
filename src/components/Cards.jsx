@@ -35,7 +35,7 @@ const TextoIngreso = styled.h1`
    color: white;
    font-family: 'Indie Flower', cursive;
    position: relative;
-   top: -100px;
+   top: -80px;
    background-color: #252422;
    border-radius: 20px;
    backdrop-filter: blur(10px);
@@ -43,6 +43,7 @@ const TextoIngreso = styled.h1`
    padding: 15px;
    @media (max-width: 500px) {
         width: 80%;
+        font-size: 12px;
     }
 `
 
@@ -56,7 +57,7 @@ export default function Cards(props) {
       <ContenedorCartas>
          <DivIngreso>
          {
-            character[0]?null:<Lottie className='giflogin' options={{animationData: searching, ...defaultOption}} width={500} onClick={null}/>
+            character[0]?null:<Lottie className='giflogin' options={{animationData: searching, ...defaultOption}} width={350} onClick={null}/>
          }
          {
             character[0]?null:<TextoIngreso>Ingrese un número para mostrar un Personaje de Rick&Morty o un nombre para mostrar un Jugador de Fútbol</TextoIngreso>

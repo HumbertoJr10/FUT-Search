@@ -47,7 +47,7 @@ export default function FavoriteContainer () {
         <ContenedorCartas>
         <DivIngreso>
          {
-            favorites[0]?null:<Lottie options={{animationData: nothing, ...defaultOption}} width={500} onClick={null}/>
+            favorites[0]?null:<Lottie options={{animationData: nothing, ...defaultOption}} width={350} onClick={null}/>
          }
          {
             favorites[0]?null:<TextoIngreso>Las cartas que agregue a Favoritos se mostrarán aquí</TextoIngreso>
