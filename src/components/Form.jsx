@@ -82,6 +82,9 @@ const ErrorLoginP= styled.p`
     padding: 5px;
     margin-bottom: 10px;
     border-radius: 20px;
+    @media (max-width: 500px) {
+        width: 300px;
+    }
 `
 const Todo = styled.div`
 display: flex;
