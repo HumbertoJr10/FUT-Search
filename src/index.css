@@ -115,3 +115,9 @@ code {
     justify-content: center;
   }
 }
+
+@media (max-width: 500px) {
+  .giflogin {
+    width: 20px;
+  }
+}

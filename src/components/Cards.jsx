@@ -56,7 +56,7 @@ export default function Cards(props) {
       <ContenedorCartas>
          <DivIngreso>
          {
-            character[0]?null:<Lottie options={{animationData: searching, ...defaultOption}} width={500} onClick={null}/>
+            character[0]?null:<Lottie className='giflogin' options={{animationData: searching, ...defaultOption}} width={500} onClick={null}/>
          }
          {
             character[0]?null:<TextoIngreso>Ingrese un número para mostrar un Personaje de Rick&Morty o un nombre para mostrar un Jugador de Fútbol</TextoIngreso>

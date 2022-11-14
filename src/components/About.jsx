@@ -41,7 +41,7 @@ const ImagenAbout = styled.img`
     margin-bottom: 5px;
     margin-top: 15px;
     @media (max-width:500px) {
-        width: 200px;
+        width: 300px;
     }
 `
 
@@ -50,6 +50,11 @@ width: 600px;
 @media (max-width: 800px) {
     width: 400px;
 }
+
+@media (max-width:500px) {
+        width: 300px;
+    }
+
 `
 
 const TextoAbout = styled.h2`
@@ -57,6 +62,9 @@ const TextoAbout = styled.h2`
     margin: 40px;
     font-size: 25px;
     text-align: justify;
+    @media (max-width:500px) {
+        font-size: 15px;
+    }
 `
 
 const ContenedorRow = styled.div`
@@ -71,6 +79,11 @@ const ContenedorRow = styled.div`
 const IconSocial = styled.img`
 width: 50px;
 margin: 20px;
+
+@media (max-width:500px) {
+        width: 40px;
+        margin: 15px;
+    }
 `
 const SocialContainer = styled.div`
 display: flex;
