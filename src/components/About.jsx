@@ -17,7 +17,10 @@ const Header = styled.div`
     border-right: gold 1px solid;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
- 
+    @media (max-width:500px) {
+        width: 100%;
+        margin-left: 0;
+    }
 `
 const TituloAbout = styled.h1`
     margin: 0;
@@ -38,6 +41,10 @@ const Contenido = styled.div`
     align-items: center;
     border-left: 1px solid white;
     border-right: 1px solid white;
+    @media (max-width:500px) {
+        width: 100%;
+        margin: 0;
+    }
     
 `
 const ImagenAbout = styled.img`
@@ -68,6 +75,7 @@ const TextoAbout = styled.h2`
     text-align: justify;
     @media (max-width:500px) {
         font-size: 15px;
+        margin: 20px
     }
 `
 
