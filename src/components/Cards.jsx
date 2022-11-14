@@ -25,6 +25,10 @@ const DivIngreso = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
+   @media (max-width: 500px) {
+        width: 100%;
+        align-items: center;
+    }
 
 `
 const TextoIngreso = styled.h1`
@@ -37,6 +41,9 @@ const TextoIngreso = styled.h1`
    backdrop-filter: blur(10px);
    opacity: 75%;
    padding: 15px;
+   @media (max-width: 500px) {
+        width: 80%;
+    }
 `
 
 export default function Cards(props) {

@@ -21,6 +21,9 @@ const BtnStyle = styled.button`
       background-color: gold;
       color: #252422;
    }
+   @media (max-width: 500px) {
+        display: none;
+    }
 `
 
 export default function BotonRandom({BuscarRickMorty}) {

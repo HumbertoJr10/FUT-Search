@@ -10,6 +10,7 @@ const BarraBusqueda = styled.div`
 &:hover {
    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.7));
 }
+
 `
 const BotonBarra = styled.button`
    background-color: #252422;
@@ -25,6 +26,11 @@ const BotonBarra = styled.button`
       background-color: gold;
       color: #252422;
    }
+   @media (max-width: 500px) {
+        width: 80px;
+        font-size: 15px;
+        margin: 9px;
+    }
 `
 const BotonImagen = styled.img`
    width: 20px;
@@ -36,6 +42,9 @@ height: 40px;
 color: white;
 border-radius: 10px;
 margin-left: 10px;
+@media (max-width: 500px) {
+        width: 90px;
+    }
 
 `
  
