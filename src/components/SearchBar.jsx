@@ -26,7 +26,7 @@ const BotonBarra = styled.button`
       background-color: gold;
       color: #252422;
    }
-   @media (max-width: 500px) {
+   @media (max-width: 700px) {
         width: 80px;
         font-size: 15px;
         margin: 9px;

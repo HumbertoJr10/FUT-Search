@@ -24,6 +24,11 @@ const BtnStyle = styled.button`
    @media (max-width: 500px) {
         display: none;
     }
+    @media (max-width: 700px) {
+        width: 80px;
+        font-size: 15px;
+        margin: 9px;
+    }
 `
 
 export default function BotonRandom({BuscarRickMorty}) {

@@ -41,11 +41,11 @@ const Contenido = styled.div`
     align-items: center;
     border-left: 1px solid white;
     border-right: 1px solid white;
+    padding-bottom: 20px;
     @media (max-width:500px) {
         width: 100%;
         margin: 0;
     }
-    
 `
 const ImagenAbout = styled.img`
     width: 450px;
@@ -77,6 +77,9 @@ const TextoAbout = styled.h2`
         font-size: 15px;
         margin: 20px
     }
+    @media (max-width: 700px) {
+        font-size: 17px;
+    }
 `
 
 const ContenedorRow = styled.div`
@@ -92,10 +95,15 @@ const IconSocial = styled.img`
 width: 50px;
 margin: 20px;
 
+
 @media (max-width:500px) {
         width: 40px;
         margin: 15px;
     }
+
+ &:hover {
+    width: 55px;
+ }
 `
 const SocialContainer = styled.div`
 display: flex;
