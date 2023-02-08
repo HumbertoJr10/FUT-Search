@@ -169,8 +169,8 @@ export default function Form({login}) {  // ----------Componente ---------
     <DivLogin>
         <TextoLogin>Welcome</TextoLogin>
         <DivInputLogin>
-            <InputLogin onChange={usernameHandler} type="text" placeholder="Username"/>
-            <InputLogin onChange={passwordHandler} type="password" placeholder="Password" />
+            <InputLogin onChange={usernameHandler} type="text" placeholder="humberto@gmail.com"/>
+            <InputLogin onChange={passwordHandler} type="password" placeholder="humberto123" />
         </DivInputLogin>
         <ButtonLogin disabled={errors.passErrors?true:false} onClick={login}>Login</ButtonLogin>
         <div>
