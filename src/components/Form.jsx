@@ -123,6 +123,10 @@ export default function Form({login}) {  // ----------Componente ---------
         password: 'humberto123'
     }
 
+    console.log({
+        username: 'humberto@gmail.com',
+        password: 'humberto123'
+    })
     
     const [errors, setErrors] = useState({
         userErrros: '',
